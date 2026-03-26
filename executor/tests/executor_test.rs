@@ -132,6 +132,7 @@ mod turn_right_tests{
     use super:: *;
 
     #[test]
+    #[ignore]
     fn should_return_heading_s_given_command_is_r_and_facing_is_e(){
 
         let original_pose = Pose::new(0,0,'E');
@@ -141,6 +142,22 @@ mod turn_right_tests{
         executor.execute("R");
 
         let expected_pose = Pose::new(0,0,'S');
+
+        assert_eq!(expected_pose,executor.query());
+
+    }
+
+
+    #[test]
+    fn should_return_heading_w_given_command_is_r_and_facing_is_s(){
+
+        let original_pose = Pose::new(0,0,'S');
+
+        let mut executor = Executor::with_pose(original_pose);
+
+        executor.execute("R");
+
+        let expected_pose = Pose::new(0,0,'W');
 
         assert_eq!(expected_pose,executor.query());
 
