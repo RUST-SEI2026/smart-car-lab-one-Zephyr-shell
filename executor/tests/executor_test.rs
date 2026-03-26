@@ -1,11 +1,10 @@
 use executor::{Executor,Pose};
 
-#[cfg(not(test))]
+//#[cfg(not(test))]
 mod move_tests{
     use super::*;
 
     #[test]
-    //#[ignore]
     fn should_return_x_plus_1_given_command_is_m_and_facing_is_e(){
 
         let original_pose = Pose::new(0,0,'E');
@@ -19,7 +18,6 @@ mod move_tests{
     }
 
     #[test]
-    //#[ignore]
     fn should_return_y_plus_1_given_command_is_m_and_facing_is_n(){
 
         let original_pose = Pose::new(0,0,'N');
@@ -33,7 +31,6 @@ mod move_tests{
     }
 
     #[test]
-    //#[ignore]
     fn should_return_x_minus_1_given_command_is_m_and_facing_is_w(){
 
         let original_pose = Pose::new(0,0,'W');
@@ -61,11 +58,10 @@ mod move_tests{
 
 }
 
-#[cfg(not(test))]
+//#[cfg(not(test))]
 mod turn_left_tests{
     use super:: *;
     #[test]
-    #[ignore]
     fn should_return_heading_n_given_command_is_l_and_facing_is_e(){
 
         let original_pose = Pose::new(0,0,'E');
@@ -81,7 +77,6 @@ mod turn_left_tests{
     }
 
     #[test]
-    #[ignore]
     fn should_return_heading_w_given_command_is_l_and_facing_is_n(){
 
         let original_pose = Pose::new(0,0,'N');
@@ -97,7 +92,6 @@ mod turn_left_tests{
     }
 
     #[test]
-    #[ignore]
      fn should_return_heading_s_given_command_is_l_and_facing_is_w(){
 
         let original_pose = Pose::new(0,0,'W');
@@ -132,7 +126,6 @@ mod turn_right_tests{
     use super:: *;
 
     #[test]
-    #[ignore]
     fn should_return_heading_s_given_command_is_r_and_facing_is_e(){
 
         let original_pose = Pose::new(0,0,'E');
@@ -149,7 +142,6 @@ mod turn_right_tests{
 
 
     #[test]
-    #[ignore]
     fn should_return_heading_w_given_command_is_r_and_facing_is_s(){
 
         let original_pose = Pose::new(0,0,'S');
@@ -166,7 +158,6 @@ mod turn_right_tests{
 
 
     #[test]
-    #[ignore]
     fn should_return_heading_n_given_command_is_r_and_facing_is_w(){
 
         let original_pose = Pose::new(0,0,'W');
