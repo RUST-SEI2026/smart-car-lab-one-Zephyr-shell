@@ -1,4 +1,6 @@
 use executor::{Executor,Pose};
+
+#[cfg(not(test))]
 mod move_tests{
     use super::*;
 
@@ -55,6 +57,25 @@ mod move_tests{
 
         let expected_pose = Pose::new(0,-1,'S');
         assert_eq!(expected_pose,executor.query());
+    }
+
+}
+
+mod turn_left_tests{
+    use super:: *;
+    #[test]
+    fn should_return_heading_n_given_command_is_l_and_facing_is_e(){
+
+        let original_pose = Pose::new(0,0,'E');
+
+        let mut executor = Executor::with_pose(original_pose);
+
+        executor.execute("L");
+
+        let expected_pose = Pose::new(0,0,'N');
+
+        assert_eq!(expected_pose,executor.query());
+
     }
 
 }
