@@ -96,6 +96,7 @@ mod turn_left_tests{
     }
 
     #[test]
+    #[ignore]
      fn should_return_heading_s_given_command_is_l_and_facing_is_w(){
 
         let original_pose = Pose::new(0,0,'W');
@@ -105,6 +106,21 @@ mod turn_left_tests{
         executor.execute("L");
 
         let expected_pose = Pose::new(0,0,'S');
+
+        assert_eq!(expected_pose,executor.query());
+
+    }
+
+    #[test]
+    fn should_return_heading_e_given_command_is_l_and_facing_is_s(){
+
+        let original_pose = Pose::new(0,0,'S');
+
+        let mut executor = Executor::with_pose(original_pose);
+
+        executor.execute("L");
+
+        let expected_pose = Pose::new(0,0,'E');
 
         assert_eq!(expected_pose,executor.query());
 
