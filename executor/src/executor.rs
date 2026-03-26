@@ -44,6 +44,7 @@ impl Executor {
                     'E' => self.pose.heading = 'N',
                     'N' => self.pose.heading = 'W',
                     'W' => self.pose.heading = 'S',
+                    'S' => self.pose.heading = 'E',
                     _ => (),
                 },
                 _ => (),
