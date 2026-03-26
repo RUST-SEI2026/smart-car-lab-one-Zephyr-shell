@@ -80,7 +80,7 @@ mod turn_left_tests{
     }
 
     #[test]
-    fn should_return_heading_e_given_command_is_l_and_facing_is_n(){
+    fn should_return_heading_w_given_command_is_l_and_facing_is_n(){
 
         let original_pose = Pose::new(0,0,'N');
 
