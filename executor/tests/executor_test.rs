@@ -3,7 +3,7 @@ mod move_tests{
     use super::*;
 
     #[test]
-    #[ignore]
+    //#[ignore]
     fn should_return_x_plus_1_given_command_is_m_and_facing_is_e(){
 
         let original_pose = Pose::new(0,0,'E');
@@ -17,7 +17,7 @@ mod move_tests{
     }
 
     #[test]
-    #[ignore]
+    //#[ignore]
     fn should_return_y_plus_1_given_command_is_m_and_facing_is_n(){
 
         let original_pose = Pose::new(0,0,'N');
@@ -31,7 +31,7 @@ mod move_tests{
     }
 
     #[test]
-    #[ignore]
+    //#[ignore]
     fn should_return_x_minus_1_given_command_is_m_and_facing_is_w(){
 
         let original_pose = Pose::new(0,0,'W');
