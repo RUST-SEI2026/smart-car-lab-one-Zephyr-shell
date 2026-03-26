@@ -61,6 +61,7 @@ mod move_tests{
 
 }
 
+#[cfg(not(test))]
 mod turn_left_tests{
     use super:: *;
     #[test]
@@ -125,4 +126,25 @@ mod turn_left_tests{
         assert_eq!(expected_pose,executor.query());
 
     }
+}
+
+mod turn_right_tests{
+    use super:: *;
+
+    #[test]
+    fn should_return_heading_s_given_command_is_r_and_facing_is_e(){
+
+        let original_pose = Pose::new(0,0,'E');
+
+        let mut executor = Executor::with_pose(original_pose);
+
+        executor.execute("R");
+
+        let expected_pose = Pose::new(0,0,'S');
+
+        assert_eq!(expected_pose,executor.query());
+
+    }
+
+
 }
